@@ -159,7 +159,35 @@ header {
   cursor: pointer;
 }
 /*about*/
-
+.info {
+  width: 50%;
+  margin: 40px 0 0 40px;
+  float: left;
+}
+.info p {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  border-bottom: 4px solid #333;
+  margin-bottom: 40px;
+  font-size: 30px;
+}
+.infoImg {
+  width: 40%;
+  height: 400px;
+  float: right;
+}
+.imgFrame {
+  width: 250px;
+  height: 300px;
+  border: 4px solid #333;
+  margin: 70px 0 0 50px;
+}
+.imgFrame img {
+  width: 250px;
+  height: 300px;
+  object-fit: cover;
+}
 /*skills*/
 .skillsMenu {
   width: 500px;
@@ -171,15 +199,20 @@ header {
 .skillsMenu li {
   width: 200px;
   height: 50px;
-  border: 3.5px solid #333;
+  border: 3.5px solid #ccc;
   border-radius: 20px;
   text-align: center;
   line-height: 50px;
+  transition: all 0.3s;
 }
 
 .skillsMenu li a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
   font-size: 20px;
   font-weight: bold;
+  color: #ccc;
 }
 
 .skillsMenu li:first-child {
@@ -190,17 +223,26 @@ header {
 }
 
 .skillsMenu li.active {
+  border: 3.5px solid #333;
   background-color: #8dcde9;
 }
-
+.skillsMenu li.active a {
+  color: #333;
+}
 .skillsBox {
   width: 100%;
   height: 220px;
   margin-top: 50px;
+  position: relative;
 }
 
 .skillsList {
   display: flex;
+  position: absolute;
+  visibility: hidden;
+}
+.skillsList.target {
+  visibility: visible;
 }
 .skillsList li {
   width: 200px;
@@ -219,6 +261,13 @@ header {
   border: 3.5px solid #333;
   margin-bottom: 35px;
   border-radius: 20px;
+}
+
+.skillsImg > img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin: 5px 0 0 7px;
 }
 
 /*projects*/
@@ -242,6 +291,22 @@ header {
   width: 65%;
   height: 100%;
 }
+.projectContents > p {
+  width: 300px;
+  height: 35px;
+  margin: 30px 0 0 30px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.projectContents li {
+  font-size: 20px;
+  margin: 30px 0 0 30px;
+}
+.projectContents li:last-child {
+  width: 350px;
+  text-align: justify;
+}
 .projectImg {
   width: 35%;
   height: 100%;
@@ -250,7 +315,6 @@ header {
 .projImgBox {
   width: 240px;
   height: 260px;
-  background: url(images/bongo.png) center / cover;
   background-repeat: no-repeat;
   margin-top: 40px;
 }
@@ -259,6 +323,18 @@ header {
   margin-top: 30px;
 }
 
+.proj1 > .projectImg > .projImgBox {
+  background: url(images/proj1.png) center / cover;
+}
+.proj2 > .projectImg > .projImgBox {
+  background: url(images/susu.png) center / cover;
+}
+.proj3 > .projectImg > .projImgBox {
+  background: url(images/proj3.png) center / cover;
+}
+.proj4 > .projectImg > .projImgBox {
+  background: url(images/proj4.png) center / cover;
+}
 /*blog*/
 .blog {
   width: 100%;
