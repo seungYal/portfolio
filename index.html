@@ -4,6 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>이승열의 포트폴리오</title>
   </head>
   <body>
@@ -13,11 +20,11 @@
       </div>
       <div class="navi">
         <ul class="naviMenu">
-          <li><a href="javascript:void(0)">ABOUT</a></li>
-          <li><a href="javascript:void(0)">SKILLS</a></li>
-          <li><a href="javascript:void(0)">PROJECTS</a></li>
-          <li><a href="javascript:void(0)">BLOG</a></li>
-          <li><a href="javascript:void(0)">CONTACT</a></li>
+          <li><a href="javascript:goToScroll('about')">ABOUT</a></li>
+          <li><a href="javascript:goToScroll('skills')">SKILLS</a></li>
+          <li><a href="javascript:goToScroll('projects')">PROJECTS</a></li>
+          <li><a href="javascript:goToScroll('blog')">BLOG</a></li>
+          <li><a href="javascript:goToScroll('contact')">CONTACT</a></li>
         </ul>
       </div>
     </header>
@@ -38,8 +45,16 @@
           <div class="info">
             <p>이름 : 이승열</p>
             <p>생년월일 : 99.02.22</p>
-            <p>취미 : 글쓰기</p>
-            <p>이곳은 자기소개란입니다.</p>
+            <!-- <p>취미 : 글쓰기</p> -->
+            <p>
+              <span>키보드</span>를 두들기는 것과 <span>인터넷 밈</span>을
+              좋아합니다. 개발자 밈을 보고 그들의 웃음에 동참하고 싶어 개발
+              공부를 시작했습니다. <br />
+              <span>HTML과 CSS</span>를 통해 웹퍼블리싱 및 요소 배치를 합니다.
+              ES6 문법을 활용한 <span>모던 자바스크립트</span>로 스크립트를
+              작성합니다. 현재 <span>React</span>를 공부하고 있으며, node.js를
+              활용한 백엔드에도 관심을 갖고 있습니다.
+            </p>
           </div>
           <div class="infoImg">
             <div class="imgFrame">
@@ -59,10 +74,10 @@
         <div class="boxInner">
           <ul class="skillsMenu">
             <li class="active">
-              <a href="javascript:void(0)" onclick="skillMenu(0)">FRONT_END</a>
+              <a href="javascript:skillMenu(0)">FRONT_END</a>
             </li>
-            <li><a href="javascript:void(0)" onclick="skillMenu(1)">UI/UX DESIGN</a></li>
-            <li><a href="javascript:void(0)" onclick="skillMenu(2)">etc.</a></li>
+            <li><a href="javascript:skillMenu(1)">UI/UX DESIGN</a></li>
+            <li><a href="javascript:skillMenu(2)">etc.</a></li>
           </ul>
         </div>
         <div class="skillsBox">
@@ -150,8 +165,10 @@
                 <ul>
                   <li>메타버스 의류 쇼핑몰</li>
                   <li>
-                    이젠 아카데미 성남 팀프로젝트. 메타버스 기반의 옷 쇼핑몰. 구매한 의류 상품을 자신의 아바타도 함께 입을 수 있도록 하는
-                    서비스를 기획하였고, 해당 컨셉에 맞게 웹사이트를 디자인 및 제작하였습니다.
+                    이젠 아카데미 성남 팀프로젝트. 메타버스 기반의 옷 쇼핑몰.
+                    구매한 의류 상품을 자신의 아바타도 함께 입을 수 있도록 하는
+                    서비스를 기획하였고, 해당 컨셉에 맞게 웹사이트를 디자인 및
+                    제작하였습니다.
                   </li>
                 </ul>
               </div>
@@ -166,8 +183,9 @@
                 <ul>
                   <li>포트폴리오 웹사이트</li>
                   <li>
-                    두들 디자인 컨셉. Notion의 느낌을 내기 위해 모노톤으로 구성하였습니다. 단조로운 느낌에서 벗어나고 싶어 중간에 포인트
-                    컬러를 활용했습니다.
+                    두들 디자인 컨셉. Notion의 느낌을 내기 위해 모노톤으로
+                    구성하였습니다. 단조로운 느낌에서 벗어나고 싶어 중간에
+                    포인트 컬러를 활용했습니다.
                   </li>
                 </ul>
               </div>
@@ -182,7 +200,8 @@
                 <ul>
                   <li>성경통독 사이트</li>
                   <li>
-                    교회 교인들과 함께 진행하는 성경 통독 프로그램의 매일 분량을 보여주는 사이트. n일차 데이터를 작성하고 date함수를 통해
+                    교회 교인들과 함께 진행하는 성경 통독 프로그램의 매일 분량을
+                    보여주는 사이트. n일차 데이터를 작성하고 date함수를 통해
                     오늘의 날짜를 계산하여 출력하는 방식으로 제작했습니다.
                   </li>
                 </ul>
@@ -198,7 +217,8 @@
                 <ul>
                   <li>영화 스트리밍 사이트 디자인</li>
                   <li>
-                    피그마를 활용해 모바일 및 PC화면 디자인하였습니다. 회원가입 폼을 작성할 때 정규식을 활용해 올바른 데이터를 서버로 보낼
+                    피그마를 활용해 모바일 및 PC화면 디자인하였습니다. 회원가입
+                    폼을 작성할 때 정규식을 활용해 올바른 데이터를 서버로 보낼
                     수 있도록 하는 스크립트를 작성했습니다.
                   </li>
                 </ul>
@@ -238,7 +258,9 @@
           <div class="blogInfo">
             <p>벨로그</p>
             <p>
-              <a href="https://velog.io/@seung_yal/posts"> seung_yal (얄로그) </a>
+              <a href="https://velog.io/@seung_yal/posts">
+                seung_yal (얄로그)
+              </a>
             </p>
           </div>
         </div>
@@ -266,6 +288,7 @@
         <p>designed & developed By seung_yal</p>
       </div>
     </footer>
+    <div class="toTop" onclick="toTop()"></div>
     <script src="script.js" /></script>
   </body>
 </html>
